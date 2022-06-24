@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="icons">
+            <div class="github">
+                <a href="http://github.com/oneboyfromife/" target="_blank"><i class='bx bxl-github'></i></a>
+            </div>
+            <div class="twit">
+                <a href="http://twitter.com/oneboyfromife/" target="_blank"><i class='bx bxl-twitter'></i></a>
+            </div>
+            <div class="inst">
+                <a href="http://instagram.com/oneboyfromife/" target="_blank"><i class='bx bxl-instagram' ></i></a>
+            </div>
+        </div>
+        <!-- box code -->
+        <div class="box">
+            <div class="img">
+                <img src="./img/profile.jpg" alt="">
+            </div>
+        </div>
+        <!-- card code -->
+        <div class="card">
+            <div class="dialogue-box">
+                <div class="text">Akintunde Owojori</div>
+                <div class="location">Osogbo, Nigeria</div>
+            </div>
+            <div class="post">
+                <p>Software Developer</p>
+            </div>
+            <div class="button-box">
+                <a href="http://twitter.com/oneboyfromife/" target="_blank"><button class="message">Message</button></a>
+                <a href="http://twitter.com/oneboyfromife/" target="_blank"><button class="follow">Follow</button></a>
+            </div>
+        </div>
+        <!-- card code ends -->
+    </div>
+    <!-- wrapper ends -->
+    <div class="heart"></div>
+    <!-- JavaScript code -->
+    <script>
+        const wrapper = document.querySelector(".wrapper"),
+        follow_btn = document.querySelector(".button-box .follow"),
+        heart = document.querySelector(".heart");
+
+        follow_btn.addEventListener("click", (e)=>{
+            heart.classList.add("active");
+            follow_btn.innerHTML = "Following";
+
+            setTimeout(()=>{
+            heart.classList.remove("active");
+            follow_btn.innerHTML = "Follow";
+            }, 5000);
+        })
+
+    </script>
+</body>
+</html>
